@@ -48,8 +48,8 @@ resizeBtn.addEventListener("click", function resizeGrid() {
   const sizePrompt = prompt("Enter a new size:");
   if (sizePrompt === null) {
     return;
-  } else if (Number(sizePrompt) === NaN) {
-    alert("Please enter a valid Number.");
+  } else if (isNaN(Number(sizePrompt))) {
+    alert("Please enter a valid number.");
     return;
   } else if (Number(sizePrompt) <= 0) {
     alert("The number you choose must be greater than 0.");
