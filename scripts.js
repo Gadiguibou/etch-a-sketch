@@ -28,11 +28,11 @@ const createGrid = function (size = 16) {
   
     childDivNodeList.forEach((childDiv) => {
       childDiv.addEventListener("pointerenter", () => {
-        childDiv.classList.add("active-div");
+        childDiv.style.backgroundColor = "black";
       });
       childDiv.addEventListener("pointerout", () => {
         setTimeout(function () {
-          childDiv.classList.remove("active-div");
+          childDiv.style.backgroundColor = "yellow";
         }, 2000);
       });
     });
