@@ -6,18 +6,22 @@ for (let i = 0; i < 16 * 16; i++) {
   containerDiv.append(childDiv);
 }
 
-const childDivNodeList = document.querySelectorAll(".child-div");
+function makeInteractive() {
+  const childDivNodeList = document.querySelectorAll(".child-div");
 
-childDivNodeList.forEach((childDiv) => {
-  childDiv.addEventListener("pointerenter", () => {
-    childDiv.classList.add("active-div");
+  childDivNodeList.forEach((childDiv) => {
+    childDiv.addEventListener("pointerenter", () => {
+      childDiv.classList.add("active-div");
+    });
+    childDiv.addEventListener("pointerout", () => {
+      setTimeout(function () {
+        childDiv.classList.remove("active-div");
+      }, 2000);
+    });
   });
-  childDiv.addEventListener("pointerout", () => {
-    setTimeout(function () {
-      childDiv.classList.remove("active-div");
-    }, 2000);
-  });
-});
+}
+
+makeInteractive();
 
 const resizeBtn = document.querySelector(".resize-button");
 
@@ -46,5 +50,7 @@ resizeBtn.addEventListener("click", function resizeGrid() {
       childDiv.classList.add("child-div");
       containerDiv.append(childDiv);
     }
+
+    makeInteractive();
   }
 });
