@@ -34,7 +34,7 @@ const createGrid = function (size = 16) {
       childDiv.addEventListener("pointerout", () => {
         setTimeout(function () {
           childDiv.style.opacity = 0;
-        }, 2000);
+        }, 5000);
       });
     });
   }
