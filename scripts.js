@@ -28,11 +28,12 @@ const createGrid = function (size = 16) {
   
     childDivNodeList.forEach((childDiv) => {
       childDiv.addEventListener("pointerenter", () => {
-        childDiv.style.backgroundColor = "black";
+        const currentOpacity = Number(childDiv.style.opacity);
+        childDiv.style.opacity = currentOpacity + 0.1;
       });
       childDiv.addEventListener("pointerout", () => {
         setTimeout(function () {
-          childDiv.style.backgroundColor = "yellow";
+          childDiv.style.opacity = 0;
         }, 2000);
       });
     });
