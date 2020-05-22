@@ -1,9 +1,14 @@
+body {
+  background-color: darkblue;
+}
+
 .container {
   display: grid;
   width: 960px;
   height: 960px;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
+  background-color: white;
 }
 
 .child-div {
