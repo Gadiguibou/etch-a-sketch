@@ -40,6 +40,8 @@ const createGrid = function (size = 16) {
   makeInteractive();
 }
 
+createGrid();
+
 const resizeBtn = document.querySelector(".resize-button");
 
 resizeBtn.addEventListener("click", function resizeGrid() {
