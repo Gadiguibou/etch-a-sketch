@@ -54,6 +54,9 @@ resizeBtn.addEventListener("click", function resizeGrid() {
   } else if (Number(sizePrompt) <= 0) {
     alert("The number you choose must be greater than 0.");
     return;
+  } else if (Number(sizePrompt) > 320) {
+    alert("The number you chose was too big to draw. Please pick something between 1 and 320.");
+    return;
   } else {
     createGrid(Number(sizePrompt));
   }
