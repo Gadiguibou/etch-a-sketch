@@ -28,7 +28,11 @@ const createGrid = function (size = 16) {
   
     childDivNodeList.forEach((childDiv) => {
       childDiv.addEventListener("pointerenter", () => {
-        childDiv.style.backgroundColor = "black";
+        const redValue = Math.random() * 255;
+        const greenValue = Math.random() * 255;
+        const blueValue = Math.random () * 255;
+
+        childDiv.style.backgroundColor = `rgb(${redValue},${greenValue},${blueValue})`;
       });
       childDiv.addEventListener("pointerout", () => {
         setTimeout(function () {
