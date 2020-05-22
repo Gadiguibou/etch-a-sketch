@@ -36,7 +36,7 @@ const createGrid = function (size = 16) {
       });
       childDiv.addEventListener("pointerout", () => {
         setTimeout(function () {
-          childDiv.style.backgroundColor = "yellow";
+          childDiv.style.backgroundColor = "lightgrey";
         }, 2000);
       });
     });
